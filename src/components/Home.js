@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from "react-router-dom";
 import QrReader from 'react-qr-reader'
 import {Switch, Route, NavLink, useHistory } from "react-router-dom";
 
@@ -29,10 +30,14 @@ async function handleError(err) {
           {open ? 
            <QrReader
           delay={300}
+          facingMode='environment'
           onError = {handleError}
           onScan = {handleScan}
-          style={{ width: '25%' }}
+          style={{ width: '50%' }}
         /> : null}
+     
+      <a 
+    target="_blank" href={result?.data} >Painting</a>
            
             </div>
            

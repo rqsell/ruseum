@@ -56,7 +56,7 @@ display:inline;
 }
 .qrbox{
   display:flex;
-  flex-direction: row;
+  flex-direction:row;
 }
 @keyframes App-logo-spin {
   from {

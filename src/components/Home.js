@@ -5,7 +5,7 @@ import {Switch, Route, NavLink, useHistory } from "react-router-dom";
 
 function Home(props) {
     const [open, setOpen]= useState(false)
-    const [result, setResult]= useState('No result')
+    const [result, setResult]= useState('')
     console.log(open)
 
 async function handleScan(data)  {
@@ -27,7 +27,7 @@ async function handleError(err) {
               <br></br>
                 <span>Art is all around us... even on your phones. Click the icon to get started</span>
                 <img src = './magnifyingglass.png' alt= 'glass' className='glass'  onClick={() => setOpen(!open) }/>
-         <div className= 'qrbox'>
+         {/* <div className= 'qrbox'> */}
           {open ? 
            <QrReader
           delay={300}
@@ -36,10 +36,11 @@ async function handleError(err) {
           onScan = {handleScan}
           style={{ width: '100%' }}
         /> : null}
-     
+     {result ?
       <a 
     target="_blank" href={result?.data} ><img src= './starrypicture.png' className= 'starrypicture'/></a>
-           </div>
+     : null}
+           {/* </div> */}
             </div>
            
         </div>

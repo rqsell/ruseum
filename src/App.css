@@ -27,7 +27,30 @@
 .App-link {
   color: #61dafb;
 }
-
+/* Home page */
+.icon{
+  float:left;
+  height: 40vh;
+}
+.page{
+  display:flex;
+  flex-direction: column;
+}
+.body{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.glass{
+  height: 30vh;
+}
+.invisible{
+display:none;
+}
+.clickedglass{
+display:inline;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

@@ -19,9 +19,7 @@ async function handleError(err) {
 }
     return (
         <div className='page'>
-        <div className='head'>
-            <img src= "./Ruseum.png" alt="icon" className="icon"></img>
-            </div>
+      
             <div className='body'>
                 <h2> Get started</h2>
               <br></br>

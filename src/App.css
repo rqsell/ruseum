@@ -35,12 +35,14 @@
 .page{
   display:flex;
   flex-direction: column;
+  
 }
 .body{
   display:flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 25%
 }
 .glass{
   height: 30vh;
@@ -59,11 +61,19 @@ display:inline;
   display:flex;
   flex-direction:row;
 }
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.artwork{
+  height: 70vh;
+width: auto;
+}
+.artpage{
+  display: flex;
+  flex-direction: column;
+ 
+}
+.artbox{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top:15%;
 }

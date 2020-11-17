@@ -30,7 +30,7 @@
 /* Home page */
 .icon{
   float:left;
-  height: 40vh;
+  height: 31vh;
 }
 .page{
   display:flex;
@@ -53,6 +53,7 @@ display:inline;
 }
 .starrypicture{
   height: 25vh;
+  position: relative;
 }
 .qrbox{
   display:flex;

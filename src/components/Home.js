@@ -28,19 +28,20 @@ async function handleError(err) {
                 <span>Art is all around us... even on your phones. Click the icon to get started</span>
                 <img src = './magnifyingglass.png' alt= 'glass' className='glass'  onClick={() => setOpen(!open) }/>
          {/* <div className= 'qrbox'> */}
+         {result ?
+      <a 
+    target="_blank" href={result?.data}  ><img src= './starrypicture.png' className= 'starrypicture'/></a>
+     : null} 
+           
           {open ? 
            <QrReader
           delay={300}
           facingMode='environment'
           onError = {handleError}
           onScan = {handleScan}
-          style={{ width: '100%' }}
+          style={{ width: '75%' }}
         /> : null}
-     {result ?
-      <a 
-    target="_blank" href={result?.data} ><img src= './starrypicture.png' className= 'starrypicture'/></a>
-     : null}
-           {/* </div> */}
+     
             </div>
            
         </div>

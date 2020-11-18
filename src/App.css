@@ -1,4 +1,7 @@
-.App {
+*{
+  font-family: 'Comfortaa', cursive;
+}
+App {
   text-align: center;
 }
 
@@ -76,4 +79,5 @@ width: auto;
   justify-content: center;
   align-items: center;
   margin-top:15%;
+  text-align: center;
 }

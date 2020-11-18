@@ -3,6 +3,7 @@ import './App.css';
 import { Link } from "react-router-dom";
 import Home from './components/Home'
 import Ono from './components/Ono'
+import Kahlo from './components/Kahlo'
 import {BrowserRouter, Switch, Route, NavLink, useHistory } from "react-router-dom"; 
 
 
@@ -19,6 +20,7 @@ function App() {
   <Switch>
    <Route exact path="/" render={(props) => <Home {...props} />} />
    <Route exact path="/Ono" render={(props) => <Ono {...props} />} />
+   <Route exact path="/Kahlo" render={(props) => <Kahlo {...props} />} />
   </Switch>
   </BrowserRouter>
   </div>

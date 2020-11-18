@@ -44,6 +44,14 @@ App {
   align-items: center;
   /* padding-top: 25%, */
 }
+.musicbox{
+  display:flex;
+  justify-content: space-between;
+}
+.musicbuttons{
+  height: 15vh;
+  width:auto;
+}
 .glass{
   height: 15vh;
   width:auto;
@@ -83,4 +91,22 @@ width: 80%;
   align-items: center;
   margin-top:15%;
   text-align: center;
+}
+/* Music Component */
+.musicbox{
+  display:flex;
+  justify-content: space-between;
+}
+.musicbuttons{
+  height: 15vh;
+  width:auto;
+  margin-right: 3%;
+}
+/* Media Desktop */
+@media (min-width: 800px){
+  .icon{
+    float:left;
+    height: 25vh;
+   position:absolute;
+  }
 }

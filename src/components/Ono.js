@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Music from './Music'
 function Ono(props) {
     return (
         <div className='artpage'>
@@ -22,7 +22,7 @@ Born in 1933 in Tokyo City, Yoko Ono was a prominent artist, activist, and singe
         <li>Listen to one of  Yoko Ono’s songs below!</li>
     </ul>
 </span>
- <iframe className='music' src="https://drive.google.com/file/d/1Qu-Q3PGmLY2PcecPRcS2h75sXe26C1nN/preview" width="500" height="50"></iframe>
+<Music/>
            </div>
           
            

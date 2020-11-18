@@ -16,15 +16,10 @@ App {
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+.head{
+  width:100%;
+ padding-bottom:20vh;
 }
 
 .App-link {
@@ -33,22 +28,25 @@ App {
 /* Home page */
 .icon{
   float:left;
-  height: 31vh;
+  height: 15vh;
+ position:absolute;
 }
 .page{
   display:flex;
   flex-direction: column;
-  
+ 
+  margin:4%;
 }
 .body{
   display:flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 25%
+  /* padding-top: 25%, */
 }
 .glass{
-  height: 30vh;
+  height: 15vh;
+  width:auto;
 }
 .invisible{
 display:none;
@@ -57,7 +55,7 @@ display:none;
 display:inline;
 }
 .starrypicture{
-  height: 25vh;
+  height: 15vh;
   position: relative;
 }
 .qrbox{
@@ -65,16 +63,21 @@ display:inline;
   flex-direction:row;
 }
 .artwork{
-  height: 70vh;
-width: auto;
+  height: auto;
+width: 80%;
 }
 .artpage{
   display: flex;
   flex-direction: column;
+  margin: 4%;
  
+}
+.date{
+  font-style: italic;
 }
 .artbox{
   display:flex;
+  /* width:100%; */
   flex-direction: column;
   justify-content: center;
   align-items: center;

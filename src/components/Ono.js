@@ -1,10 +1,11 @@
 import React from 'react';
 
-function Work1(props) {
+function Ono(props) {
     return (
         <div className='artpage'>
            <div className= 'artbox'>
-           <h1>Cloud Piece</h1>
+           <h1>Cloud Piece, <span className='date'>1963</span></h1>
+       
                <img className='artwork' src= './cloudpiece.jpg'/>
               
                <h2> Yoko Ono</h2>
@@ -29,4 +30,4 @@ Born in 1933 in Tokyo City, Yoko Ono was a prominent artist, activist, and singe
     );
 }
 
-export default Work1;
+export default Ono;

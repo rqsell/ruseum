@@ -6,8 +6,8 @@ App {
 }
 /* Hamburger Menu */
 .hamburgerMenu {
-  width: 25vw;
-  height: 150vh;
+  width: 100vw;
+  height: 100vh;
   padding-top: 3%;
   margin-top:0;
   background-color: #d6a2cd;
@@ -182,5 +182,44 @@ width: auto;
     float:left;
     height: 25vh;
    position:absolute;
+  }
+  .hamburgerMenu {
+    width: 25vw;
+    height: 150vh;
+    padding-top: 3%;
+    margin-top:0;
+    background-color: #d6a2cd;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    transition: transform 0.3s cubic-bezier(0, 0.52, 0, 1);
+    overflow: scroll;
+    z-index: 1000;
+    transform: translate3d(-100vh, 0, 0);
+  }
+  #clickedmenu {
+    transform: translate3d(0vw, 0, 0);
+    overflow: hidden;
+  }
+  .x {
+    float: right;
+    padding-top: 5%;
+   padding-right: 10%;
+    height: 3vh;
+    width: 1vw;
+  }
+  .x:hover {
+    color: white;
+  }
+  .hamburgerMenu li {
+    list-style-type: none;
+    padding: 20px;
+    color: black;
+    list-style-type: none;
+  }
+  .hamburgerMenu li:hover {
+    list-style-type: none;
+    padding: 20px;
+    color: white;
   }
 }

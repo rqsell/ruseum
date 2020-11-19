@@ -21,6 +21,7 @@ async function handleError(err) {
         <div className='page'>
       
             <div className='body'>
+            
                 <h2> Get started</h2>
               <br></br>
                 <span>Art is all around us... even on your phones. Click the icon to get started</span>

@@ -102,6 +102,17 @@ width: 80%;
   width:auto;
   margin-right: 3%;
 }
+.carouselitem{
+  height: 55vh;
+
+  width: 55vh;
+  margin:auto;
+}
+.carousel{
+  padding-top: 3%;
+  width: 300px;
+  height: 350px;
+}
 /* Media Desktop */
 @media (min-width: 800px){
   .icon{

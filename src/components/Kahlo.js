@@ -1,8 +1,12 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 
 function Kahlo(props) {
     return (
         <div className='artpage'>
+         <Link to='/Explore' style={{ textDecoration: "none" }}>
+        <div className='explore'>Keep Exploring <img className='arrow' src='./arrow.png'/></div>
+        </Link>
         <div className= 'artbox'>
         <h1>Me and my Parrots, <span className='date'>1941</span></h1>
             <img className='artwork' src= './kahlo.jpg'/>

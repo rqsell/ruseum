@@ -1,8 +1,12 @@
 import React from 'react';
 import Music from './Music'
+import { Link } from "react-router-dom";
 function Ono(props) {
     return (
         <div className='artpage'>
+         <Link to='/Explore' style={{ textDecoration: "none" }}>
+        <div className='explore'>Keep Exploring <img className='arrow' src='./arrow.png'/></div>
+        </Link>
            <div className= 'artbox'>
            <h1>Cloud Piece, <span className='date'>1963</span></h1>
        

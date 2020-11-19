@@ -9,14 +9,15 @@ function GetStarted(props) {
  <ol>
 <li>Navigate to the QRCode page. You have the option of printing out our museum package and taping the codes directly to the wall for hands on exploration or if you have access to two screens feel free to use our QR slideshow</li>
 <li>Now you are ready to start! Head over to our Explore page</li>
-<li>Click on the Magnifying Glass icon</li>
+<li>Click on the   <img src = './magnifyingglass.png' alt= 'glass' className='glass2'  /> icon</li>
 <li>Point your camera at the code</li>
-<li>A painting icon will appear. Tap on that and voilà! You have discovered the first painting.</li>
+<li>A <img src= './starrypicture.png' className= 'starrypicture2'/> icon will appear. Tap on that and voilà! You have discovered the first painting.</li>
 <li>To continue the experience click the Keep Exploring button.</li>
 </ol>
 
             
         </div>
+       
         </div>
     );
 }

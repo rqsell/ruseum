@@ -1,8 +1,12 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 
 function Goya(props) {
     return (
         <div className='artpage'>
+        <Link to='/Explore' style={{ textDecoration: "none" }}>
+        <div className='explore'>Keep Exploring <img className='arrow' src='./arrow.png'/></div>
+        </Link>
         <div className= 'artbox'>
         <h1>The Black Duchess, <span className='date'>1797</span></h1>
             <img className='artwork' src= './goya.jpg'/>

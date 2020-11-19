@@ -21,7 +21,7 @@ async function handleError(err) {
         <div className='page'>
       
             <div className='body'>
-            
+          
                 <span>Art is all around us... even on your phones. Click the icon to get started</span>
                 <img src = './magnifyingglass.png' alt= 'glass' className='glass'  onClick={() => setOpen(!open) }/>
          {/* <div className= 'qrbox'> */}

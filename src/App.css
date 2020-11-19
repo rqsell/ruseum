@@ -4,38 +4,66 @@
 App {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Hamburger Menu */
+.hamburgerMenu {
+  width: 25vw;
+  height: 150vh;
+  padding-top: 3%;
+  margin-top:0;
+  background-color: #d6a2cd;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  transition: transform 0.3s cubic-bezier(0, 0.52, 0, 1);
+  overflow: scroll;
+  z-index: 1000;
+  transform: translate3d(-100vh, 0, 0);
+}
+#clickedmenu {
+  transform: translate3d(0vw, 0, 0);
+  overflow: hidden;
+}
+.x {
+  float: right;
+  padding-top: 5%;
+ padding-right: 10%;
+  height: 3vh;
+  width: 1vw;
+}
+.x:hover {
+  color: white;
+}
+.hamburgerMenu li {
+  list-style-type: none;
+  padding: 20px;
+  color: black;
+  list-style-type: none;
+}
+.hamburgerMenu li:hover {
+  list-style-type: none;
+  padding: 20px;
+  color: white;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
 
-.head{
-  width:100%;
- padding-bottom:20vh;
-}
-
-.App-link {
-  color: #61dafb;
-}
 /* Home page */
 .icon{
   float:left;
   height: 15vh;
- position:absolute;
+ /* position:absolute; */
+
 }
+.head{
+  width:100%;
+  padding-bottom:20vh;
+  }
+
 .page{
   display:flex;
   flex-direction: column;
- 
   margin:4%;
+  
 }
 .body{
   display:flex;
@@ -53,6 +81,7 @@ App {
   width:auto;
 }
 .glass{
+  padding-top: 3%;
   height: 15vh;
   width:auto;
 }
@@ -80,6 +109,7 @@ width: 80%;
   margin: 4%;
  
 }
+
 .date{
   font-style: italic;
 }
@@ -112,6 +142,18 @@ width: 80%;
   padding-top: 3%;
   width: 300px;
   height: 350px;
+}
+/* Get Started */
+.start{
+  border: 3px solid black;
+  padding: 5%;;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#appintro{
+  text-align: center;
 }
 /* Media Desktop */
 @media (min-width: 800px){

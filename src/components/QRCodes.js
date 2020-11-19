@@ -2,7 +2,7 @@ import React from 'react';
 import 'react-dom';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
-function Carousels(props) {
+function QRCodes(props) {
     return (
         <div className="carousel">
             <Carousel autoPlay className='carousel'>
@@ -28,4 +28,4 @@ function Carousels(props) {
     );
 }
 
-export default Carousels;
+export default QRCodes;

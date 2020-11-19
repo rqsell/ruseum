@@ -150,6 +150,38 @@ width: 80%;
     margin:auto;
   }
 }
+@media (min-height: 700px){
+
+  .carouselitem{
+    height: 20vh;
+    width: 20vh;
+    margin:auto;
+  }
+}
+  @media (min-height: 800px){
+    .carousel{
+      padding-top: 3%;
+      width: 100%;
+      height: auto;
+    }
+    .carouselitem{
+      height: 10vh;
+    width: 10h;
+    margin:auto;
+    }
+  }
+  @media (min-height: 2000px){
+    .carousel{
+      padding-top: 3%;
+      width: 100%;
+      height: auto;
+    }
+    .carouselitem{
+      height: 25vh;
+    width: 25vh;
+    margin:auto;
+    }
+  }
 /* Get Started */
 .start{
   border: 3px solid black;

@@ -26,13 +26,13 @@ function App() {
           <div className="x" onClick={() => setOpen(!open)}>
             X
           </div>
-          <Link to="/" style={{ textDecoration: "none" }}>
+          <Link to="/" style={{ textDecoration: "none" }} onClick={() => setOpen(!open)}>
             <li>Get Started</li>
        </Link>
-       <Link to="/Explore" style={{ textDecoration: "none" }}>
+       <Link to="/Explore" style={{ textDecoration: "none" }} onClick={() => setOpen(!open)}>
             <li>Explore</li>
    </Link>
-   <Link to="/QRCodes" style={{ textDecoration: "none" }}>
+   <Link to="/QRCodes" style={{ textDecoration: "none" }} onClick={() => setOpen(!open)}>
             <li>QR Codes</li>
       </Link>
        

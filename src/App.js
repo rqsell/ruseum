@@ -21,11 +21,22 @@ function App() {
 <BrowserRouter>
 <div className='head'>
   
-            <img src= "./Ruseum.png" alt="icon" className="icon" onClick={() => setOpen(!open)}/>
+            <img src= "./Ruseum.png" alt="icon" className="icon" />
+
+          
+            <nav role='navigation'>
+  <div id="menuToggle">
+            <input type="checkbox" onClick={() => setOpen(!open)}/>
+
+            <span></span>
+            <span></span>
+           <span></span>
+
             <ul className="hamburgerMenu" id={open ? "clickedmenu" : ""}>
-          <div className="x" onClick={() => setOpen(!open)}>
+           
+          {/* <div className="x" onClick={() => setOpen(!open)}>
             X
-          </div>
+          </div> */}
           <Link to="/" style={{ textDecoration: "none" }} onClick={() => setOpen(!open)}>
             <li>Get Started</li>
        </Link>
@@ -36,7 +47,10 @@ function App() {
             <li>QR Codes</li>
       </Link>
        
-        </ul>
+      </ul>
+        </div>
+        </nav>
+      
       
             </div>
   <Switch>

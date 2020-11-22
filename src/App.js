@@ -20,9 +20,9 @@ function App() {
    
 <BrowserRouter>
 <div className='head'>
-  
+  <Link to='/'>
             <img src= "./Ruseum.png" alt="icon" className="icon" />
-
+</Link>
           
             <nav role='navigation'>
   <div id="menuToggle">

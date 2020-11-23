@@ -9,6 +9,7 @@ import cr from './languages/Goya/GoyaCR'
 counterpart.registerTranslations('en', en);
 counterpart.registerTranslations('es', es);
 counterpart.registerTranslations('cr', cr);
+counterpart.setLocale('en');
 function Goya(props) {
     const [lang, setLang]= useState('en')
 

@@ -10,7 +10,9 @@ import cr from './languages/Ono/OnoCR'
 counterpart.registerTranslations('en', en);
 counterpart.registerTranslations('es', es);
 counterpart.registerTranslations('cr', cr);
-counterpart.setLocale('en');
+
+
+
 function Ono(props) {
     const [lang, setLang]= useState('en')
 

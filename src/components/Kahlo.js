@@ -9,6 +9,8 @@ import cr from './languages/Kahlo/KahloCR';
 counterpart.registerTranslations('en', en);
 counterpart.registerTranslations('es', es);
 counterpart.registerTranslations('cr', cr);
+
+
 function Kahlo(props) {
     const [lang, setLang]= useState('en')
 

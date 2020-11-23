@@ -11,6 +11,7 @@ counterpart.registerTranslations('es', es);
 counterpart.registerTranslations('cr', cr);
 
 
+
 function Krater(props) {
     const [lang, setLang]= useState('en')
 

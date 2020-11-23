@@ -2,21 +2,22 @@ import React, { useState } from 'react';
 import { Link } from "react-router-dom";
 import counterpart from 'counterpart';
 import Translate from 'react-translate-component';
-import en from './languages/Goya/GoyaEN';
-import es from './languages/Goya/GoyaES';
-import cr from './languages/Goya/GoyaCR'
+import enGoya from './languages/Goya/GoyaEN';
+import esGoya from './languages/Goya/GoyaES';
+import crGoya from './languages/Goya/GoyaCR'
 
-counterpart.registerTranslations('en', en);
-counterpart.registerTranslations('es', es);
-counterpart.registerTranslations('cr', cr);
 
-counterpart.setLocale('en');
 
 function Goya(props) {
-    const [lang, setLang]= useState('en')
+    const [langGoya, setLangGoya]= useState('enGoya')
 
-    const onLangChange = (e) => {
-        setLang(e.target.value)
+    counterpart.registerTranslations('enGoya', enGoya);
+counterpart.registerTranslations('esGoya', esGoya);
+counterpart.registerTranslations('crGoya', crGoya);
+
+counterpart.setLocale('enGoya');
+    const onLangChangeGoya = (e) => {
+        setLangGoya(e.target.value)
         counterpart.setLocale(e.target.value);
     } 
     return (
@@ -28,10 +29,10 @@ function Goya(props) {
         </Link>
          <div className='langBox'>
         <span>Select Language</span>
-        <select value={lang} onChange={onLangChange} className='lang'>
-            <option value='en'>English</option>
-            <option value='es'>Spanish</option>
-            <option value='cr'>Haitian Creole</option>
+        <select value={langGoya} onChange={onLangChangeGoya} className='lang'>
+            <option value='enGoya'>English</option>
+            <option value='esGoya'>Spanish</option>
+            <option value='crGoya'>Haitian Creole</option>
         </select>
         </div>
         <div className= 'artbox'>

@@ -2,23 +2,25 @@ import React, { useState } from 'react';
 import { Link } from "react-router-dom";
 import counterpart from 'counterpart';
 import Translate from 'react-translate-component';
-import en from './languages/Krater/KraterEN';
-import es from './languages/Krater/KraterES';
-import cr from './languages/Krater/KraterCR';
+import enKrater from './languages/Krater/KraterEN';
+import esKrater from './languages/Krater/KraterES';
+import crKrater from './languages/Krater/KraterCR';
 
-counterpart.registerTranslations('en', en);
-counterpart.registerTranslations('es', es);
-counterpart.registerTranslations('cr', cr);
 
-counterpart.setLocale('en');
 
 function Krater(props) {
-    const [lang, setLang]= useState('en')
+    const [langKrater, setLangKrater]= useState('enKrater')
 
-    const onLangChange = (e) => {
-        setLang(e.target.value)
+    const onLangChangeKrater = (e) => {
+        setLangKrater(e.target.value)
         counterpart.setLocale(e.target.value);
     } 
+    counterpart.registerTranslations('enKrater', enKrater);
+counterpart.registerTranslations('esKrater', esKrater);
+counterpart.registerTranslations('crKrater', crKrater);
+
+counterpart.setLocale('enKrater');
+    // counterpart.setLocale('enKrater');
     return (
         <div>
          <div className='artpage'>
@@ -29,10 +31,10 @@ function Krater(props) {
         </Link>
         <div className='langBox'>
         <span>Select Language</span>
-        <select value={lang} onChange={onLangChange} className='lang'>
-            <option value='en'>English</option>
-            <option value='es'>Spanish</option>
-            <option value='cr'>Haitian Creole</option>
+        <select value={langKrater} onChange={onLangChangeKrater} className='lang'>
+            <option value='enKrater'>English</option>
+            <option value='esKrater'>Spanish</option>
+            <option value='crKrater'>Haitian Creole</option>
         </select>
         </div>
         <div className= 'artbox'>

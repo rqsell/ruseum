@@ -3,21 +3,23 @@ import Music from './Music'
 import { Link } from "react-router-dom";
 import counterpart from 'counterpart';
 import Translate from 'react-translate-component';
-import en from './languages/Ono/OnoEN';
-import es from './languages/Ono/OnoES'
-import cr from './languages/Ono/OnoCR'
+import enOno from './languages/Ono/OnoEN';
+import esOno from './languages/Ono/OnoES'
+import crOno from './languages/Ono/OnoCR'
 
-counterpart.registerTranslations('en', en);
-counterpart.registerTranslations('es', es);
-counterpart.registerTranslations('cr', cr);
 
-counterpart.setLocale('en');
 
 function Ono(props) {
-    const [lang, setLang]= useState('en')
-
-    const onLangChange = (e) => {
-         setLang(e.target.value)
+    const [langOno, setLangOno]= useState('enOno')
+    
+    counterpart.registerTranslations('enOno', enOno);
+    counterpart.registerTranslations('esOno', esOno);
+    counterpart.registerTranslations('crOno', crOno);
+    
+    counterpart.setLocale('enOno');
+    
+    const onLangChangeOno = (e) => {
+         setLangOno(e.target.value)
          counterpart.setLocale(e.target.value);
      } 
     return (
@@ -30,10 +32,10 @@ function Ono(props) {
         </Link>
         <div className='langBox'>
         <span>Select Language</span>
-        <select value={lang} onChange={onLangChange} className='lang'>
-            <option value='en'>English</option>
-            <option value='es'>Spanish</option>
-            <option value='cr'>Haitian Creole</option>
+        <select value={langOno} onChange={onLangChangeOno} className='lang'>
+            <option value='enOno'>English</option>
+            <option value='esOno'>Spanish</option>
+            <option value='crOno'>Haitian Creole</option>
         </select>
         </div>
            <div className= 'artbox'>

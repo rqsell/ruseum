@@ -2,21 +2,22 @@ import React, { useState } from 'react';
 import { Link } from "react-router-dom";
 import counterpart from 'counterpart';
 import Translate from 'react-translate-component';
-import en from './languages/Kahlo/KahloEN';
-import es from './languages/Kahlo/KahloES';
-import cr from './languages/Kahlo/KahloCR';
+import enKahlo from './languages/Kahlo/KahloEN';
+import esKahlo from './languages/Kahlo/KahloES';
+import crKahlo from './languages/Kahlo/KahloCR';
 
-counterpart.registerTranslations('en', en);
-counterpart.registerTranslations('es', es);
-counterpart.registerTranslations('cr', cr);
 
-counterpart.setLocale('en');
 
 function Kahlo(props) {
-    const [lang, setLang]= useState('en')
+    const [langKahlo, setLangKahlo] = useState('enKahlo')
 
-    const onLangChange = (e) => {
-        setLang(e.target.value)
+    counterpart.registerTranslations('enKahlo', enKahlo);
+counterpart.registerTranslations('esKahlo', esKahlo);
+counterpart.registerTranslations('crKahlo', crKahlo);
+
+counterpart.setLocale('enKahlo');
+    const onLangChangeKahlo = (e) => {
+        setLangKahlo(e.target.value)
         counterpart.setLocale(e.target.value);
     } 
     return (
@@ -28,10 +29,10 @@ function Kahlo(props) {
         </Link>
         <div className='langBox'>
         <span>Select Language</span>
-        <select value={lang} onChange={onLangChange} className='lang'>
-            <option value='en'>English</option>
-            <option value='es'>Spanish</option>
-            <option value='cr'>Haitian Creole</option>
+        <select value={langKahlo} onChange={onLangChangeKahlo} className='lang'>
+            <option value='enKahlo'>English</option>
+            <option value='esKahlo'>Spanish</option>
+            <option value='crKahlo'>Haitian Creole</option>
         </select>
         </div>
         <div className= 'artbox'>

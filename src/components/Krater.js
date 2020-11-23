@@ -1,35 +1,55 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from "react-router-dom";
+import counterpart from 'counterpart';
+import Translate from 'react-translate-component';
+import en from './languages/Krater/KraterEN';
+import es from './languages/Krater/KraterES';
+import cr from './languages/Krater/KraterCR';
+
+counterpart.registerTranslations('en', en);
+counterpart.registerTranslations('es', es);
+counterpart.registerTranslations('cr', cr);
+
 
 function Krater(props) {
+    const [lang, setLang]= useState('en')
+
+    const onLangChange = (e) => {
+        setLang(e.target.value)
+        counterpart.setLocale(e.target.value);
+    } 
     return (
         <div>
          <div className='artpage'>
          <Link to='/Explore' style={{ textDecoration: "none" }}>
-        <div className='explore'>Keep Exploring <img className='arrow' src='./arrow.png'/></div>
+        <div className='explore'>
+        <Translate content ='copy.arrow'  unsafe={true}/>
+        <img className='arrow' src='./arrow.png'/></div>
         </Link>
+        <div className='langBox'>
+        <span>Select Language</span>
+        <select value={lang} onChange={onLangChange} className='lang'>
+            <option value='en'>English</option>
+            <option value='es'>Spanish</option>
+            <option value='cr'>Haitian Creole</option>
+        </select>
+        </div>
         <div className= 'artbox'>
-        <h1>Terracotta column-krater (bowl for mixing wine and water), <span className='date'>ca. 470–460 B.C.</span></h1>
+        <Translate content ='copy.title' component='h1' unsafe={true}/>
             <img className='artwork' src= './greekpottery.jpg'/>
-           
-            <h2>Attributed to the Orchard Painter</h2>
-            <span>This Kratar shows the story of Jacob and the Golden Fleece:<br/>
+            <Translate content ='copy.title' component='h2' unsafe={true}/> 
+            <Translate content ='copy.description'  unsafe={true}/>
 
-Jason led the Argonauts, a band of adventurers who set out on the ship Argo to steal the magical golden fleece of a ram, which was preserved in Kolchis on the Black Sea. With the help of the gods and the sorceress Medea, Jason was able to take the fleece from a grove protected by a dragon. Here, with Athena beside him, he reaches for the fleece. A companion prepares to board the ship.<br/>
-
-The basis of the legend of the Golden Fleece is probably the ancient practice of extracting alluvial gold by causing the deposits in a stream to wash over a fleece, thereby catching the gold-bearing material in the curly pelt.
-</span>
-
-<h2>Fun Facts!</h2>
+            <Translate content ='copy.funfacts' component='h2' unsafe={true}/>  
 <span>
  <ul>
-     <li>Pottery was used to tell myths that were told by Greek poets.</li>
+ <Translate content ='copy.funfactsli1' component='li' unsafe={true}/>
  </ul>
  </span>
-<h2>Explore!</h2>
+ <Translate content ='copy.exploreh2' component='h2' unsafe={true}/>  
 <span>
  <ul>
-     <li>Describe what you see on the krater. Can you identify the characters?</li>
+ <Translate content ='copy.exploreli1' component='li' unsafe={true}/>
   
  </ul>
 </span>

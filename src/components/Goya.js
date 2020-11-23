@@ -1,37 +1,50 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from "react-router-dom";
+import counterpart from 'counterpart';
+import Translate from 'react-translate-component';
+import en from './languages/Goya/GoyaEN';
+import es from './languages/Goya/GoyaES';
+import cr from './languages/Goya/GoyaCR'
 
+counterpart.registerTranslations('en', en);
+counterpart.registerTranslations('es', es);
+counterpart.registerTranslations('cr', cr);
 function Goya(props) {
+    const [lang, setLang]= useState('en')
+
+    const onLangChange = (e) => {
+        setLang(e.target.value)
+        counterpart.setLocale(e.target.value);
+    } 
     return (
         <div className='artpage'>
         <Link to='/Explore' style={{ textDecoration: "none" }}>
-        <div className='explore'>Keep Exploring <img className='arrow' src='./arrow.png'/></div>
+        <div className='explore'>
+        <Translate content ='copy.arrow'  unsafe={true}/>
+        <img className='arrow' src='./arrow.png'/></div>
         </Link>
+         <div className='langBox'>
+        <span>Select Language</span>
+        <select value={lang} onChange={onLangChange} className='lang'>
+            <option value='en'>English</option>
+            <option value='es'>Spanish</option>
+            <option value='cr'>Haitian Creole</option>
+        </select>
+        </div>
         <div className= 'artbox'>
-        <h1>The Black Duchess, <span className='date'>1797</span></h1>
+        <Translate content ='copy.title' component='h1' unsafe={true}/>
             <img className='artwork' src= './goya.jpg'/>
            
             <h2> Francisco de Goya y Lucientes</h2>
-            <span>Goya  painted Doña María de Pilar Teresa Cayetana de Silva Álvarez de Toledo  otherwise known as the Duchess of Alba. She was known for her infamous beauty. The Duchess is wearing the popular maja style of dress. Maja or the male Majo were usually members of lower class who popularized a style of fanciful dress, manners and behavior. Their style of lace, full skirts, and dramatic fans were eventually adopted by the upper class. Goya focused on depicting the majas in his early career and played a part in popularizing the style for the upper class.
+            <Translate content ='copy.description'  unsafe={true}/>
+            <Translate content ='copy.aboutartisth1' component='h2' unsafe={true}/>
+            <Translate content ='copy.aboutartist'  unsafe={true}/>
 
-<br/>The background of the work is a dreamy transparent landscape of her  estate in Sanlúcar.
-
-<br/>Goya shows a close relationship with the Duchess with the words, solo Goya ("only Goya") written in the sand, and her rings read "Alba" and "Goya."
-
-
-
-</span>
-<h2>About the Artist</h2>
-<span>
-Francisco de Goya y Lucientes(1746- 1828), was a Spanish romantic painter and printmaker. He is considered the most important Spanish artist of the late 18th and early 19th centuries and throughout his long career was a commentator and chronicler of his era.
-</span>
-
-<h2>Explore!</h2>
+            <Translate content ='copy.exploreh2' component='h2' unsafe={true}/>
 <span>
 <ul>
-     <li>What is your favorite and least favorite part of the Duchess’s outfit?</li>
-     <li> Why do you think Goya painted the background the way he did?</li>
-  
+<Translate content ='copy.exploreli1' component='li' unsafe={true}/>
+    <Translate content ='copy.exploreli2' component='li' unsafe={true}/> 
  </ul>
 </span>
 </div>

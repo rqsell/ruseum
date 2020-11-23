@@ -215,6 +215,15 @@ width: 80%;
   width: 300px;
   height: 350px;
 }
+/* Language Switching */
+.langBox{
+  margin-left:10%;
+  margin-top: 5%;
+}
+.lang{
+  width: 20%;
+margin-left: 3%
+}
 /* for iPhhone distortion */
 @media (max-width: 500px){
   .carouselitem{
@@ -320,6 +329,7 @@ width: auto;
     height: 25vh;
    position:absolute;
   }
+
   .hamburgerMenu {
     width: 25vw;
     height: 150vh;

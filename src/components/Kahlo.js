@@ -1,24 +1,35 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from "react-router-dom";
-
+import counterpart from 'counterpart';
+import Translate from 'react-translate-component';
+counterpart.registerTranslations('en', {
+        copy:{
+        arrow: 'Keep Exploring',
+        title: 'Me and my Parrots, <i>1941</i>',
+        description: 'Kahlo was most famous for creating powerful self-portraits showcasing her strong features. Here she paints herself sitting with her pet parrots. Kahlo suffered a near fatal bus accident and she had health complications for the rest of her life. Many interpret her self-portraits as a way to be seen and acknowledged. Here Kahlo stares boldly at the viewer, commanding their gaze.',
+        aboutartisth1: 'About the Artist',
+        aboutartist: 'Magdalena Carmen Frida Kahlo y Calderón, popularly known as Frida Kahlo was a Mexican painter who lived from 1907-1954. She began to paint at the age of 18 during her recovery from a near fatal bus accident. Her famous self-portraits explore her life and identity, influenced by her life-long physical pain and her complicated marriage with celebrated artist Diego Rivera.',
+        exploreli1: 'What is your favorite and least favorite part of the Duchess’s outfit?',
+        exploreli2:'Why do you think Goya painted the background the way he did?',
+        }
+});
 function Kahlo(props) {
     return (
         <div className='artpage'>
          <Link to='/Explore' style={{ textDecoration: "none" }}>
-        <div className='explore'>Keep Exploring <img className='arrow' src='./arrow.png'/></div>
+        <div className='explore'>
+        <Translate content ='copy.arrow'  unsafe={true}/>
+         <img className='arrow' src='./arrow.png'/></div>
         </Link>
         <div className= 'artbox'>
-        <h1>Me and my Parrots, <span className='date'>1941</span></h1>
+        <Translate content ='copy.title' component='h1' unsafe={true}/>
             <img className='artwork' src= './kahlo.jpg'/>
-           
             <h2> Frida Khalo</h2>
-            <span>Kahlo was most famous for creating powerful self-portraits showcasing her strong features. Here she paints herself sitting with her pet parrots. Kahlo suffered a near fatal bus accident and she had health complications for the rest of her life. Many interpret her self-portraits as a way to be seen and acknowledged. Here Kahlo stares boldly at the viewer, commanding their gaze.
+            <Translate content ='copy.description'  unsafe={true}/>
+            <Translate content ='copy.aboutartisth1' component='h2' unsafe={true}/>
+            <Translate content ='copy.aboutartist' unsafe={true}/>
+            
 
-</span>
-<h2>About the Artist</h2>
-<span>
-Magdalena Carmen Frida Kahlo y Calderón, popularly known as Frida Kahlo was a Mexican painter who lived from 1907-1954. She began to paint at the age of 18 during her recovery from a near fatal bus accident. Her famous self-portraits explore her life and identity, influenced by her life-long physical pain and her complicated marriage with celebrated artist Diego Rivera. 
-</span>
 <h2>Fun Facts!</h2>
 <span>
  <ul>

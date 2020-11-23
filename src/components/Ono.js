@@ -1,29 +1,54 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Music from './Music'
 import { Link } from "react-router-dom";
+import counterpart from 'counterpart';
+import Translate from 'react-translate-component';
+import en from './languages/Ono/OnoEN';
+import es from './languages/Ono/OnoES'
+import cr from './languages/Ono/OnoCR'
+
+counterpart.registerTranslations('en', en);
+counterpart.registerTranslations('es', es);
+counterpart.registerTranslations('cr', cr);
+counterpart.setLocale('en');
 function Ono(props) {
+    const [lang, setLang]= useState('en')
+
+    const onLangChange = (e) => {
+         setLang(e.target.value)
+         counterpart.setLocale(e.target.value);
+     } 
     return (
         <div className='artpage'>
          <Link to='/Explore' style={{ textDecoration: "none" }}>
-        <div className='explore'>Keep Exploring <img className='arrow' src='./arrow.png'/></div>
+        <div className='explore'>
+        <Translate content ='copy.arrow'  unsafe={true}/>
+       
+         <img className='arrow' src='./arrow.png'/></div>
         </Link>
+        <div className='langBox'>
+        <span>Select Language</span>
+        <select value={lang} onChange={onLangChange} className='lang'>
+            <option value='en'>English</option>
+            <option value='es'>Spanish</option>
+            <option value='cr'>Haitian Creole</option>
+        </select>
+        </div>
            <div className= 'artbox'>
-           <h1>Cloud Piece, <span className='date'>1963</span></h1>
+           <Translate content ='copy.title' component='h1' unsafe={true}/>
        
                <img className='artwork' src= './cloudpiece.jpg'/>
               
                <h2> Yoko Ono</h2>
-               <span>Yoko Ono believed that the concept of an artwork could be just as powerful as the work itself. This is what led her to create her “Instructional Painting” series. She challenges the reader to complete, sometimes impossible tasks, in order to create the work. In Cloud Piece, she relies on the reader’s imagination to carry out the piece.
-</span>
-<h2>About the Artist</h2>
-<span>
-Born in 1933 in Tokyo City, Yoko Ono was a prominent artist, activist, and singer. She was a part of the Fluxus art movement in the 1960s and 1970s that focused on the process of creating rather than the finished work. She was famously married to John Lennon from The Beetles. 
-</span>
-<h2>Explore!</h2>
+               <Translate content ='copy.description'  unsafe={true}/>
+               <Translate content ='copy.aboutartisth1' component='h2' unsafe={true}/>
+               <Translate content ='copy.aboutartist'  unsafe={true}/>
+               <Translate content ='copy.exploreh2' component='h2' unsafe={true}/>
+
 <span>
     <ul>
-        <li>Use your imagination to carry out the piece. What does your garden look like with the clouds?</li>
-        <li>Listen to one of  Yoko Ono’s songs below!</li>
+    <Translate content ='copy.exploreli1' component='li' unsafe={true}/>
+    <Translate content ='copy.exploreli2' component='li' unsafe={true}/>    
     </ul>
 </span>
 <Music/>

@@ -10,6 +10,7 @@ counterpart.registerTranslations('en', en);
 counterpart.registerTranslations('es', es);
 counterpart.registerTranslations('cr', cr);
 
+counterpart.setLocale('en');
 
 function Kahlo(props) {
     const [lang, setLang]= useState('en')

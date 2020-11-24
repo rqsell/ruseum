@@ -27,7 +27,7 @@ function Ono(props) {
     <div className="artpage">
       <Link to="/Explore" style={{ textDecoration: "none" }}>
         <div className="explore">
-          <Translate content="copy.arrow" unsafe={true} />
+          <Translate content="Ono.arrow" unsafe={true} />
 
           <img className="arrow" src="./arrow.png" />
         </div>
@@ -45,30 +45,18 @@ function Ono(props) {
 
       {/* Page with Translate Components */}
       <div className="artbox">
-        <Translate content="copy.titleOno" component="h1" unsafe={true} />
+        <Translate content="Ono.title" component="h1" unsafe={true} />
         <img className="artwork" src="./cloudpiece.jpg" />
         <h2> Yoko Ono</h2>
-        <Translate content="copy.descriptionOno" unsafe={true} />
-        <Translate
-          content="copy.aboutartisth1Ono"
-          component="h2"
-          unsafe={true}
-        />
-        <Translate content="copy.aboutartistOno" unsafe={true} />
-        <Translate content="copy.exploreh2Ono" component="h2" unsafe={true} />
+        <Translate content="Ono.description" unsafe={true} />
+        <Translate content="Ono.aboutartisth1" component="h2" unsafe={true} />
+        <Translate content="Ono.aboutartist" unsafe={true} />
+        <Translate content="Ono.exploreh2" component="h2" unsafe={true} />
 
         <span>
           <ul>
-            <Translate
-              content="copy.exploreli1Ono"
-              component="li"
-              unsafe={true}
-            />
-            <Translate
-              content="copy.exploreli2Ono"
-              component="li"
-              unsafe={true}
-            />
+            <Translate content="Ono.exploreli1" component="li" unsafe={true} />
+            <Translate content="Ono.exploreli2" component="li" unsafe={true} />
           </ul>
         </span>
 

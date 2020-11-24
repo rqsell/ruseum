@@ -26,7 +26,7 @@ function Kahlo(props) {
     <div className="artpage">
       <Link to="/Explore" style={{ textDecoration: "none" }}>
         <div className="explore">
-          <Translate content="copy.arrowKahlo" unsafe={true} />
+          <Translate content="Kahlo.arrowKahlo" unsafe={true} />
           <img className="arrow" src="./arrow.png" />
         </div>
       </Link>
@@ -43,41 +43,41 @@ function Kahlo(props) {
 
       {/* Page with Translate Components */}
       <div className="artbox">
-        <Translate content="copy.titleKahlo" component="h1" unsafe={true} />
+        <Translate content="Kahlo.title" component="h1" unsafe={true} />
         <img className="artwork" src="./kahlo.jpg" />
         <h2> Frida Khalo</h2>
-        <Translate content="copy.descriptionKahlo" unsafe={true} />
-        <Translate
-          content="copy.aboutartisth1Kahlo"
-          component="h2"
-          unsafe={true}
-        />
-        <Translate content="copy.aboutartistKahlo" unsafe={true} />
+        <Translate content="Kahlo.description" unsafe={true} />
+        <Translate content="Kahlo.aboutartisth1" component="h2" unsafe={true} />
+        <Translate content="Kahlo.aboutartist" unsafe={true} />
 
-        <Translate content="copy.funfactsKahlo" component="h2" unsafe={true} />
+        <Translate content="Kahlo.funfacts" component="h2" unsafe={true} />
         <span>
           <ul>
             <Translate
-              content="copy.funfactsli1Kahlo"
+              content="Kahlo.funfactsli1"
               component="li"
               unsafe={true}
             />
             <Translate
-              content="copy.funfactsli2Kahlo"
+              content="Kahlo.funfactsli2"
               component="li"
               unsafe={true}
             />
             <Translate
-              content="copy.funfactsli3Kahlo"
+              content="Kahlo.funfactsli3"
               component="li"
               unsafe={true}
             />
           </ul>
         </span>
-        <Translate content="copy.exploreh2" component="h2" unsafe={true} />
+        <Translate content="Kahlo.exploreh2" component="h2" unsafe={true} />
         <span>
           <ul>
-            <Translate content="copy.exploreli1" component="li" unsafe={true} />
+            <Translate
+              content="Kahlo.exploreli1"
+              component="li"
+              unsafe={true}
+            />
           </ul>
         </span>
       </div>

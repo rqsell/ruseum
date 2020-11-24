@@ -28,7 +28,7 @@ function Krater(props) {
       <div className="artpage">
         <Link to="/Explore" style={{ textDecoration: "none" }}>
           <div className="explore">
-            <Translate content="copy.arrowKrater" unsafe={true} />
+            <Translate content="Krater.arrow" unsafe={true} />
             <img className="arrow" src="./arrow.png" />
           </div>
         </Link>
@@ -48,34 +48,26 @@ function Krater(props) {
         </div>
         {/* Page with Translate Components */}
         <div className="artbox">
-          <Translate content="copy.titleKrater" component="h1" unsafe={true} />
+          <Translate content="Krater.title" component="h1" unsafe={true} />
           <img className="artwork" src="./greekpottery.jpg" />
-          <Translate content="copy.titleKrater" component="h2" unsafe={true} />
-          <Translate content="copy.descriptionKrater" unsafe={true} />
+          <Translate content="Krater.title" component="h2" unsafe={true} />
+          <Translate content="Krater.description" unsafe={true} />
 
-          <Translate
-            content="copy.funfactsKrater"
-            component="h2"
-            unsafe={true}
-          />
+          <Translate content="Krater.funfacts" component="h2" unsafe={true} />
           <span>
             <ul>
               <Translate
-                content="copy.funfactsli1Krater"
+                content="Krater.funfactsli1"
                 component="li"
                 unsafe={true}
               />
             </ul>
           </span>
-          <Translate
-            content="copy.exploreh2Krater"
-            component="h2"
-            unsafe={true}
-          />
+          <Translate content="Krater.exploreh2" component="h2" unsafe={true} />
           <span>
             <ul>
               <Translate
-                content="copy.exploreli1Krater"
+                content="Krater.exploreli1"
                 component="li"
                 unsafe={true}
               />

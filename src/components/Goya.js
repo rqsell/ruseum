@@ -26,7 +26,7 @@ function Goya(props) {
     <div className="artpage">
       <Link to="/Explore" style={{ textDecoration: "none" }}>
         <div className="explore">
-          <Translate content="copy.arrow" unsafe={true} />
+          <Translate content="Goya.arrow" unsafe={true} />
           <img className="arrow" src="./arrow.png" />
         </div>
       </Link>
@@ -43,19 +43,19 @@ function Goya(props) {
 
       {/* Page with Translate Components */}
       <div className="artbox">
-        <Translate content="copy.title" component="h1" unsafe={true} />
+        <Translate content="Goya.title" component="h1" unsafe={true} />
         <img className="artwork" src="./goya.jpg" />
 
         <h2> Francisco de Goya y Lucientes</h2>
-        <Translate content="copy.description" unsafe={true} />
-        <Translate content="copy.aboutartisth1" component="h2" unsafe={true} />
-        <Translate content="copy.aboutartist" unsafe={true} />
+        <Translate content="Goya.description" unsafe={true} />
+        <Translate content="Goya.aboutartisth1" component="h2" unsafe={true} />
+        <Translate content="Goya.aboutartist" unsafe={true} />
 
-        <Translate content="copy.exploreh2" component="h2" unsafe={true} />
+        <Translate content="Goya.exploreh2" component="h2" unsafe={true} />
         <span>
           <ul>
-            <Translate content="copy.exploreli1" component="li" unsafe={true} />
-            <Translate content="copy.exploreli2" component="li" unsafe={true} />
+            <Translate content="Goya.exploreli1" component="li" unsafe={true} />
+            <Translate content="Goya.exploreli2" component="li" unsafe={true} />
           </ul>
         </span>
       </div>

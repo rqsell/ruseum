@@ -1,6 +1,6 @@
 export default {
+  //   Goya
   Goya: {
-    // Goya
     arrow: "Kontinye eksplore",
     title: "Nwa Duchesse a, <i>1797</i>",
     description:

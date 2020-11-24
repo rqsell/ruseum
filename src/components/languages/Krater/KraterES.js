@@ -8,6 +8,7 @@ export default
         funfacts: '¡Hechos graciosos!',
     funfactsli1:'La cerámica se usó para contar mitos que fueron contados por poetas griegos.',
         exploreh2: '¡Explorar!',
-        exploreli1: 'Describe lo que ves en la crátera. ¿Puedes identificar a los personajes?',
+        exploreli1: 'Describe lo que ves en la crátera. ¿Puedes identificar a los personajes?'
+,
 }
 }

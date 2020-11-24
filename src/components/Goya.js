@@ -2,20 +2,18 @@ import React, { useState } from 'react';
 import { Link } from "react-router-dom";
 import counterpart from 'counterpart';
 import Translate from 'react-translate-component';
-import enGoya from './languages/Goya/GoyaEN';
-import esGoya from './languages/Goya/GoyaES';
-import crGoya from './languages/Goya/GoyaCR'
+import enGoya from './languages/English';
+import esGoya from './languages/Spanish';
+import crGoya from './languages/HaitianCreole'
 
-
+counterpart.registerTranslations('enGoya', enGoya);
+counterpart.registerTranslations('esGoya', esGoya);
+counterpart.registerTranslations('crGoya', crGoya);
+counterpart.setLocale('enGoya');
 
 function Goya(props) {
     const [langGoya, setLangGoya]= useState('enGoya')
 
-    counterpart.registerTranslations('enGoya', enGoya);
-counterpart.registerTranslations('esGoya', esGoya);
-counterpart.registerTranslations('crGoya', crGoya);
-
-counterpart.setLocale('enGoya');
     const onLangChangeGoya = (e) => {
         setLangGoya(e.target.value)
         counterpart.setLocale(e.target.value);

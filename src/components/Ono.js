@@ -3,20 +3,20 @@ import Music from './Music'
 import { Link } from "react-router-dom";
 import counterpart from 'counterpart';
 import Translate from 'react-translate-component';
-import enOno from './languages/Ono/OnoEN';
-import esOno from './languages/Ono/OnoES'
-import crOno from './languages/Ono/OnoCR'
+import enOno from './languages/English';
+import esOno from './languages/Spanish';
+import crOno from './languages/HaitianCreole';
 
 
-
-function Ono(props) {
-    const [langOno, setLangOno]= useState('enOno')
-    
-    counterpart.registerTranslations('enOno', enOno);
+counterpart.registerTranslations('enOno', enOno);
     counterpart.registerTranslations('esOno', esOno);
     counterpart.registerTranslations('crOno', crOno);
     
     counterpart.setLocale('enOno');
+function Ono(props) {
+    const [langOno, setLangOno]= useState('enOno')
+
+    
     
     const onLangChangeOno = (e) => {
          setLangOno(e.target.value)
@@ -39,20 +39,20 @@ function Ono(props) {
         </select>
         </div>
            <div className= 'artbox'>
-           <Translate content ='copy.title' component='h1' unsafe={true}/>
+           <Translate content ='copy.titleOno' component='h1' unsafe={true}/>
        
                <img className='artwork' src= './cloudpiece.jpg'/>
               
                <h2> Yoko Ono</h2>
-               <Translate content ='copy.description'  unsafe={true}/>
-               <Translate content ='copy.aboutartisth1' component='h2' unsafe={true}/>
-               <Translate content ='copy.aboutartist'  unsafe={true}/>
-               <Translate content ='copy.exploreh2' component='h2' unsafe={true}/>
+               <Translate content ='copy.descriptionOno'  unsafe={true}/>
+               <Translate content ='copy.aboutartisth1Ono' component='h2' unsafe={true}/>
+               <Translate content ='copy.aboutartistOno'  unsafe={true}/>
+               <Translate content ='copy.exploreh2Ono' component='h2' unsafe={true}/>
 
 <span>
     <ul>
-    <Translate content ='copy.exploreli1' component='li' unsafe={true}/>
-    <Translate content ='copy.exploreli2' component='li' unsafe={true}/>    
+    <Translate content ='copy.exploreli1Ono' component='li' unsafe={true}/>
+    <Translate content ='copy.exploreli2Ono' component='li' unsafe={true}/>    
     </ul>
 </span>
 <Music/>

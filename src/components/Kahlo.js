@@ -26,7 +26,7 @@ function Kahlo(props) {
     <div className="artpage">
       <Link to="/Explore" style={{ textDecoration: "none" }}>
         <div className="explore">
-          <Translate content="Kahlo.arrowKahlo" unsafe={true} />
+          <Translate content="Kahlo.arrow" unsafe={true} />
           <img className="arrow" src="./arrow.png" />
         </div>
       </Link>

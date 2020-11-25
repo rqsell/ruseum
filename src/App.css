@@ -205,6 +205,17 @@ width: 80%;
   width:auto;
   margin-right: 3%;
 }
+/* Download Button */
+.download{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.download a{
+text-decoration: none;
+color:black;
+}
+/* Carousel */
 .carouselitem{
   height: 55vh;
   width: 55vh;

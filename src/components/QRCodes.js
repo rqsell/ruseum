@@ -1,31 +1,32 @@
-import React from 'react';
-import 'react-dom';
-import { Carousel } from 'react-responsive-carousel';
-import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import React from "react";
+import "react-dom";
+import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 function QRCodes(props) {
-    return (
-        <div className="carousel">
-            <Carousel autoPlay className='carousel'>
-        <div className="carouselitem" >
-            <img alt="" src="./onoQR.png" className='caroimg'/>
+  return (
+    <div>
+      <div className="download">
+        <a href="./MuseumPack.pdf">Download our Museum Pack</a>
+      </div>
+      <div className="carousel">
+        <Carousel autoPlay className="carousel">
+          <div className="carouselitem">
+            <img alt="" src="./onoQR.png" className="caroimg" />
             {/* <p className="legend">Legend 1</p> */}
-        </div>
-        <div className="carouselitem">
-            <img alt="" src="./kahloQR.png"className='caroimg' />
-           
-        </div>
-        <div className="carouselitem">
-            <img alt="" src="./kraterQR.png" className='caroimg'/>
-           
-        </div>
-        <div className="carouselitem">
-            <img alt="" src="goyaQR.png" className='caroimg' />
-           
-        </div>
-        
-    </Carousel>
-        </div>
-    );
+          </div>
+          <div className="carouselitem">
+            <img alt="" src="./kahloQR.png" className="caroimg" />
+          </div>
+          <div className="carouselitem">
+            <img alt="" src="./kraterQR.png" className="caroimg" />
+          </div>
+          <div className="carouselitem">
+            <img alt="" src="goyaQR.png" className="caroimg" />
+          </div>
+        </Carousel>
+      </div>
+    </div>
+  );
 }
 
 export default QRCodes;

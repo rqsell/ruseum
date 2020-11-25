@@ -50,7 +50,7 @@ function Krater(props) {
         <div className="artbox">
           <Translate content="Krater.title" component="h1" unsafe={true} />
           <img className="artwork" src="./greekpottery.jpg" />
-          <Translate content="Krater.title" component="h2" unsafe={true} />
+          <Translate content="Krater.artist" component="h2" unsafe={true} />
           <Translate content="Krater.description" unsafe={true} />
 
           <Translate content="Krater.funfacts" component="h2" unsafe={true} />

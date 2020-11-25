@@ -35,9 +35,9 @@ function API(props) {
     <div>
       <div>
         <h1>{frida?.name}</h1>
-        <img src={frida?._links.thumbnail.href} />
+        <img src={frida?._links.thumbnail.href} alt="pic" />
         <ul>
-          <li> Born: {frida.birthdate} </li>
+          <li> Born: {frida.birthday} </li>
           <li>Died: {frida.deathday}</li>
           <li> Nationality: {frida.nationality}</li>
           <li> Hometown: {frida.hometown} </li>

@@ -7,7 +7,7 @@ function Board({ imgUrl }) {
   const [tiles, setTiles] = useState([...Array(TILE_COUNT).keys()]);
   const [isStarted, setIsStarted] = useState(false);
   console.log("is started",  isStarted)
-  const [isSolved, setIsSolved]= useState(false);
+
 
 const shuffleTiles= () => {
     const shuffeledTiles= shuffle(tiles)
@@ -16,7 +16,6 @@ const shuffleTiles= () => {
 const swapTiles= (tileIndex) =>{ 
 if(canSwap(tileIndex, tiles.indexOf(tiles.length - 1 ))){
     const swappedTiles=  swap(tiles, tileIndex, tiles.indexOf(tiles.length - 1 ))
-    console.log(swappedTiles)
     setTiles(swappedTiles)
 }
 }
@@ -36,7 +35,7 @@ const handleStartClick = () => {
     width: BOARD_SIZE,
     height: BOARD_SIZE,
   };
-
+const hasWon = isSolved(tiles)
 
   return (
     <>
@@ -54,6 +53,10 @@ const handleStartClick = () => {
           />
         ))}
       </ul>
+      {hasWon && 
+      <div>
+          Puzzle Solved  🎉
+      </div>}
      {!isStarted ? (<button onClick={() => handleStartClick()}> Start Game </button>): (    <button onClick={() => handleShuffleClick()}> Restart Game</button> )}
     
   

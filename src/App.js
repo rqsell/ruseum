@@ -8,6 +8,7 @@ import Krater from "./components/Krater";
 import Goya from "./components/Goya";
 import QRCodes from "./components/QRCodes";
 import React, { useState } from "react";
+import Board from "./components/game/Board"
 import API from "./components/API.js";
 import {
   BrowserRouter,
@@ -86,6 +87,7 @@ function App() {
           />
           <Route exact path="/Goya" render={(props) => <Goya {...props} />} />
           <Route exact path="/API" render={(props) => <API {...props} />} />
+          <Route exact path="/Game" render={(props) => <Board {...props} />} />
         </Switch>
       </BrowserRouter>
     </div>

@@ -6,15 +6,17 @@ import { canSwap, shuffle, swap, isSolved } from "./helpers"
 function Board({ imgUrl }) {
   const [tiles, setTiles] = useState([...Array(TILE_COUNT).keys()]);
   const [isStarted, setIsStarted] = useState(false);
+  console.log("is started",  isStarted)
   const [isSolved, setIsSolved]= useState(false);
 
 const shuffleTiles= () => {
     const shuffeledTiles= shuffle(tiles)
-    setTiles(shuffleTiles)
+    setTiles(shuffeledTiles)
 }
 const swapTiles= (tileIndex) =>{ 
-if(canSwap(tileIndex, tile.length-1 )){
-    const swappedTiles=  swap(tiles, tileIndex, tiles.length -1)
+if(canSwap(tileIndex, tiles.indexOf(tiles.length - 1 ))){
+    const swappedTiles=  swap(tiles, tileIndex, tiles.indexOf(tiles.length - 1 ))
+    console.log(swappedTiles)
     setTiles(swappedTiles)
 }
 }
@@ -37,7 +39,7 @@ const handleStartClick = () => {
 
 
   return (
-    <>zz
+    <>
       <ul style={style} className="board">
         {tiles.map((tile, index) => (
           <Tile
@@ -47,11 +49,12 @@ const handleStartClick = () => {
             tile={tile}
             width={pieceWidth}
             height={pieceHeight}
+            handleTileClick={handleTileClick}
            
           />
         ))}
       </ul>
-     {!isStarted ? (<button onClick={() => handleStartClick}> Start Game </button>): (    <button onClick={() => handleShuffleClick}> Restart Game</button> )}
+     {!isStarted ? (<button onClick={() => handleStartClick()}> Start Game </button>): (    <button onClick={() => handleShuffleClick()}> Restart Game</button> )}
     
   
     </>

@@ -38,7 +38,7 @@ const handleStartClick = () => {
 const hasWon = isSolved(tiles)
 
   return (
-    <>
+    <div className="gamepage">
       <ul style={style} className="board">
         {tiles.map((tile, index) => (
           <Tile
@@ -53,14 +53,14 @@ const hasWon = isSolved(tiles)
           />
         ))}
       </ul>
-      {hasWon && 
+      {hasWon && isStarted &&
       <div>
           Puzzle Solved  🎉
       </div>}
      {!isStarted ? (<button onClick={() => handleStartClick()}> Start Game </button>): (    <button onClick={() => handleShuffleClick()}> Restart Game</button> )}
     
-  
-    </>
+  </div>
+ 
   );
 }
 

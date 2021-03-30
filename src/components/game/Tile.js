@@ -1,10 +1,11 @@
-import React from "react";
+import React, {useState} from "react";
 import { Motion, spring } from "react-motion";
 import { getMatrixPosition, getVisualPosition } from "./helpers";
 import { TILE_COUNT, GRID_SIZE, BOARD_SIZE } from "./constants"
 
 function Tile(props) {
-  const { tile, index, width, height, handleTileClick, imgUrl } = props;
+  const { tile, index, width, height, handleTileClick} = props;
+  const imgUrl= "./goyacat.jpg"
   console.log("img in tile", imgUrl)
   const { row, col } = getMatrixPosition(index);
   const visualPos = getVisualPosition(row, col, width, height);
@@ -22,6 +23,7 @@ function Tile(props) {
     translateX: spring(visualPos.x),
     translateY: spring(visualPos.y)
   }
+ 
 
   return (
     <Motion style={motionStyle}>

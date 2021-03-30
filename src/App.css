@@ -483,3 +483,8 @@ width: auto;
 .button {
   display: block;
 }
+.gamepage{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

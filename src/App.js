@@ -60,7 +60,12 @@ function App() {
                   style={{ textDecoration: "none" }}
                   onClick={() => setOpen(!open)}
                 >
-                  <li>QR Codes</li>
+                <Link
+                  to="/Game"
+                  style={{ textDecoration: "none" }}
+                  onClick={() => setOpen(!open)}
+                ></Link>
+                  <li>Puzzle</li>
                 </Link>
               </ul>
             </div>
